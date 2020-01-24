@@ -1,25 +1,43 @@
 .home {
+  @media @mobile {
+    width: 95%;
+    margin: 2% 0 2% 3%;
+  }
   header {
     border-bottom: 2px dashed @navigation-border;
 
     section {
-      margin: 3% 0;
+      margin: 3% auto;
     }
   }
 
   .content-section {
-    margin: 30px 0;
+    margin: 30px auto;
     .display-flex-jc();
     flex-wrap: wrap;
+
+    @media @mobile {
+      .mobile-display-flex();
+      width: 100%;
+      margin: 3% auto;
+    }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -31,23 +49,41 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        margin: 0 auto;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+        margin: 0 auto;
+      }
     }
   }
 
   .content-destination {
-    width: 75%;
+    width: 100%;
     margin: 0 auto 30px;
 
     img {
       border-radius: 10px;
+
+      @media @mobile {
+        margin: 3% auto;
+      }
     }
   }
 
@@ -56,13 +92,47 @@
     border-top: 2px dashed @navigation-border;
     .display-flex-jc();
 
+    @media @mobile {
+      .mobile-display-flex();
+      justify-content: flex-end;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
 
-    .btn {
-      .btn(@white, @button-bg, 2rem, 80%, 18%, @btn-padding, 5%, 12px, center);
+      @media @mobile {
+        width: 75%;
+        margin: 3% auto;
+      }
+
+      h4,
+      p {
+        @media @mobile {
+          width: 100%;
+          margin: 3% auto;
+        }
+      }
+
+      .btn {
+        .btn(
+          @white,
+          @button-bg,
+          2rem,
+          80%,
+          18%,
+          @btn-padding,
+          5%,
+          12px,
+          center
+        );
+
+        @media @mobile {
+          width: 98%;
+          padding-bottom: 4%;
+          margin: 0% auto;
+        }
+      }
     }
   }
 } // home

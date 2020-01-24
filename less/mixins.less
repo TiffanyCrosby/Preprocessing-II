@@ -1,1 +1,25 @@
 // Mixins in here
+
+.display-flex-jc() {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-display-flex() {
+  flex-direction: column;
+  align-items: center;
+}
+
+//Parametric Mixins
+
+.btn(@color, @bg-color, @ft-sz, @width, @height, @padding, @marg-botm, @bd-radius, @tx-align ) {
+  color: @color;
+  background-color: @bg-color;
+  font-size: @ft-sz;
+  width: @width;
+  height: @height;
+  padding: @padding;
+  margin-bottom: @marg-botm;
+  border-radius: @bd-radius;
+  text-align: @tx-align;
+}

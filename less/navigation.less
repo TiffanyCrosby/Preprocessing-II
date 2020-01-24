@@ -1,1 +1,29 @@
 // Navigation Styles here
+
+.nav {
+  .display-flex-jc();
+  align-items: center;
+  width: 75%;
+  border-bottom: 2px dashed @navigation-border;
+  margin: 0 auto;
+
+  h1 {
+    width: 90%;
+    text-align: center;
+    margin: 2% 3% 2% 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: @font-color;
+      margin: 0 3%;
+    }
+  }
+}

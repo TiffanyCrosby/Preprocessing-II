@@ -1,13 +1,17 @@
 .home {
+  header {
+    border-bottom: 2px dashed @navigation-border;
+
+    section {
+      margin: 3% 0;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
-    display: flex;
+    .display-flex-jc();
     flex-wrap: wrap;
-    justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -50,12 +54,15 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    .display-flex-jc();
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
     }
+
+    .btn {
+      .btn(@white, @button-bg, 2rem, 80%, 18%, @btn-padding, 5%, 12px, center);
+    }
   }
-}// home
+} // home
